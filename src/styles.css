@@ -1,0 +1,13 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.styles_scrollable-div__prSCv {
+  max-height: 90%;
+}
+.styles_scrollable-div__prSCv {
+  background-image: url("./images/airplane-g4f17840d1_1280.png");
+}
