@@ -47,7 +47,7 @@ const Login = () => {
         headers: { "Content-type": "application/json" },
       };
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://chatty-chat-app-backend.herokuapp.com/api/user/login",
         {
           email,
           password,
