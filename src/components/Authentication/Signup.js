@@ -101,7 +101,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "https://chatty-chat-app-backend.herokuapp.com/api/user",
         {
           name,
           email,

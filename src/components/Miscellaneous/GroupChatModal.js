@@ -46,7 +46,10 @@ const GroupChatModal = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://chatty-chat-app-backend.herokuapp.com/api/user?search=${search}`,
+        config
+      );
       setSearchResult(data);
       setLoading(false);
     } catch (error) {
@@ -111,7 +114,7 @@ const GroupChatModal = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `/api/chats/group`,
+        `https://chatty-chat-app-backend.herokuapp.com/api/chats/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),

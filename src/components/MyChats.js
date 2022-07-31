@@ -26,7 +26,10 @@ const MyChats = () => {
         },
       };
 
-      const { data } = await axios.get("/api/chats", config);
+      const { data } = await axios.get(
+        "https://chatty-chat-app-backend.herokuapp.com/api/chats",
+        config
+      );
       setChats(data);
 
       setLoading(false);

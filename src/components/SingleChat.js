@@ -100,7 +100,7 @@ const SingleChat = () => {
         setNewMessage("");
         setButtonPressed(false);
         const { data } = await axios.post(
-          `/api/message`,
+          `https://chatty-chat-app-backend.herokuapp.com/api/message`,
           {
             chatId: selectedChat._id,
             content: newMessage,
@@ -135,7 +135,7 @@ const SingleChat = () => {
       };
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://chatty-chat-app-backend.herokuapp.com/api/message/${selectedChat._id}`,
         config
       );
 

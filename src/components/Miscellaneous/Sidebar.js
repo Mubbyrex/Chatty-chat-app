@@ -75,7 +75,10 @@ const Sidebar = () => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://chatty-chat-app-backend.herokuapp.com/api/user?search=${search}`,
+        config
+      );
 
       setSearchResult(data);
       setLoading(false);
@@ -101,7 +104,11 @@ const Sidebar = () => {
         },
       };
 
-      const { data } = await axios.post(`/api/chats`, { userId }, config);
+      const { data } = await axios.post(
+        `https://chatty-chat-app-backend.herokuapp.com/api/chats`,
+        { userId },
+        config
+      );
 
       if (!chats.find((c) => c._id === data._id)) {
         setChats([data, ...chats]);

@@ -61,7 +61,7 @@ const UpdateGroupChatModel = ({ fetchMessages }) => {
       };
 
       const { data } = await axios.put(
-        `/api/chats/remove`,
+        `https://chatty-chat-app-backend.herokuapp.com/api/chats/remove`,
         {
           chatId: selectedChat._id,
           userId: selectedUser._id,
@@ -102,7 +102,7 @@ const UpdateGroupChatModel = ({ fetchMessages }) => {
         },
       };
       const { data } = await axios.patch(
-        `/api/chats/rename`,
+        `https://chatty-chat-app-backend.herokuapp.com/api/chats/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -142,7 +142,10 @@ const UpdateGroupChatModel = ({ fetchMessages }) => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://chatty-chat-app-backend.herokuapp.com/api/user?search=${search}`,
+        config
+      );
 
       setSearchResult(data);
       setLoading(false);
@@ -189,7 +192,7 @@ const UpdateGroupChatModel = ({ fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        `/api/chats/add`,
+        `https://chatty-chat-app-backend.herokuapp.com/api/chats/add`,
         {
           chatId: selectedChat._id,
           userId: selectedUser._id,
