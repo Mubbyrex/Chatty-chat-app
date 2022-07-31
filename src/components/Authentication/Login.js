@@ -47,7 +47,7 @@ const Login = () => {
         headers: { "Content-type": "application/json" },
       };
       const { data } = await axios.post(
-        "https://chatty-chat-app-backend.herokuapp.com/api/user/login",
+        `https://chatty-chat-app-backend.herokuapp.com/api/user/login`,
         {
           email,
           password,
@@ -68,7 +68,7 @@ const Login = () => {
     } catch (error) {
       toast({
         title: "Error Occured!",
-        description: error.response.data.message,
+        description: error.message,
         status: "error",
         duration: 5000,
         isClosable: true,
