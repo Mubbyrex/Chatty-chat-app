@@ -6,7 +6,7 @@
 }
 
 .styles_scrollable-div__prSCv {
-  max-height: 90%;
+  max-height: 90% !important;
 }
 .styles_scrollable-div__prSCv {
   background-image: url("./images/airplane-g4f17840d1_1280.png");
